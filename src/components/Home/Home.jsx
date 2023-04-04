@@ -56,12 +56,11 @@ const Home = () => {
   return (
     <div>
       <div className="container mx-auto">
-
       <Form onFinish={onFinish} className='py-10'>
-        <div className="flex">
-          <label htmlFor="" className='font-bold'>Email:</label>
+        <div className="md:flex">
           <div className="basis-4/12 px-5">
-            <Form.Item   
+            <Form.Item        
+              name="email"
               rules={[
                 {
                   required: true,
