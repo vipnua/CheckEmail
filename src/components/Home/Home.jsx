@@ -42,14 +42,12 @@ const Home = () => {
   };
 
   const onFinish = async (values) => {
-    console.log(values);
     const HandleEmailData = {
-      email: values.email
+      email: values.email.replace(/,/g, ' ').trim()
     }
     try {
       const res = await postEmail(HandleEmailData);
       getEmailData(res);
-      console.log(res);
     } catch (error) {
       console.error(error);
     }
@@ -61,10 +59,9 @@ const Home = () => {
 
       <Form onFinish={onFinish} className='py-10'>
         <div className="flex">
+          <label htmlFor="" className='font-bold'>Email:</label>
           <div className="basis-4/12 px-5">
-            <Form.Item
-              label="Email"
-              name="email"
+            <Form.Item   
               rules={[
                 {
                   required: true,
@@ -76,7 +73,7 @@ const Home = () => {
                 className="border shadow resize-none w-full"
                 cols={30}
                 rows={10}
-                placeholder="check email here"
+                placeholder="Each email is separated by 1 space or comma ! :)"
               />
             </Form.Item>
             <div className="text-center p-1">
@@ -106,10 +103,10 @@ const Home = () => {
                 {Array.isArray(emailData.data) &&
                   emailData.data.map((data, index) => (
                     <tr key={index}>
-                      <td className='border px-2' ref={(el) => tdRefs.current[index * 3] = el}>
+                      <td className='border px-2 ' ref={(el) => tdRefs.current[index * 3] = el}>
                         {data.status === 'Email is valid' ? data.email : ''}
                       </td>
-                      <td className='border px-2' ref={(el) => tdRefs.current[index * 3 + 1] = el}>
+                      <td className='border px-2 ' ref={(el) => tdRefs.current[index * 3 + 1] = el}>
                         {data.status !== 'Email is valid' && data.status !== undefined ? data.email : ''}
                       </td>
                       <td className='border px-2' ref={(el) => tdRefs.current[index * 3 + 2] = el}>

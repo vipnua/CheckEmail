@@ -2,7 +2,7 @@ import React from 'react'
 
 const Header = () => {
   return (  
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
+    <nav className="bg-gray-900 border-gray-200">
         <div className="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
             <a href="#" className="flex items-center">
                 <img src="https://cdn-icons-png.flaticon.com/512/10270/10270940.png" className="h-8 mr-3" alt="Flowbite Logo" />
