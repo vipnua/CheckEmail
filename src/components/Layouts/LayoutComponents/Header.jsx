@@ -96,7 +96,7 @@ const Header = () => {
                         </div>
                     </li>
                     <li>
-                        <a href="#" className="block py-2 pl-3 pr-4  border-b  md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">Team</a>
+                        <a href="http://107.189.159.137/check-ip" className="block py-2 pl-3 pr-4  border-b  md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">Check Ip</a>
                     </li>
                     <li>
                         <a href="#" className="block py-2 pl-3 pr-4 border-b   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">Contact</a>
