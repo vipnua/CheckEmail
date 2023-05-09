@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   return (  
@@ -19,7 +20,8 @@ const Header = () => {
             <div id="mega-menu" className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
                 <ul className="flex flex-col mt-4 font-medium md:flex-row md:space-x-8 md:mt-0">
                     <li>
-                        <a href="#" className="block py-2 pl-3 pr-4  border-b md:border-0 md:p-0 text-blue-500 md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700" aria-current="page">Home</a>
+                            <Link className='className="block py-2 pl-3 pr-4  border-b md:border-0 md:p-0 text-blue-500 md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700"' to="/">Home</Link>
+
                     </li>
                     <li>
                         <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" className="flex items-center justify-between w-full py-2 pl-3 pr-4 font-medium text-gray-900 border-b border-gray-100 md:w-auto hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">
@@ -96,7 +98,7 @@ const Header = () => {
                         </div>
                     </li>
                     <li>
-                        <a href="http://107.189.159.137/check-ip" className="block py-2 pl-3 pr-4  border-b  md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">Check Ip</a>
+                        <Link  className="block py-2 pl-3 pr-4  border-b  md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700" to="/check-proxys">Check Ip</Link>
                     </li>
                     <li>
                         <a href="#" className="block py-2 pl-3 pr-4 border-b   md:border-0  md:p-0 text-white md:hover:text-blue-500 hover:bg-gray-700 hover:text-blue-500 md:hover:bg-transparent border-gray-700">Contact</a>
